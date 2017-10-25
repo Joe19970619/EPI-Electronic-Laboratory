@@ -6,7 +6,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'; /* 可以传进一个变量，用来区分线上还是开发环境 */
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'; /* 可以传进一个变量，用来区分线上还是开发环境 */
 
 // 获取html-webpack-plugin参数方法
 var getHtmlConfig = function(name, title){
@@ -60,7 +60,7 @@ module.exports = {
     ]
 };
 
-/*if('dev' === WEBPACK_ENV){
+if('dev' === WEBPACK_ENV){
     config.entry.common.push('webpack-dev-server/client?http://localhost:8090/');
-}*/
+}
 
